@@ -5,7 +5,7 @@ import urllib2, csv, re, os
 dropbox = os.environ['DROPBOX']
 csvLocation = '{0}/noBIP/social_media_collection/office_holders/FE Office Holders.csv'.format(dropbox)
 senateURL = 'http://www.senate.gov/general/contact_information/senators_cfm.xml'
-houseURL = 'http://clerk.house.gov/member_info/text-labels-113.txt'
+houseURL = 'http://clerk.house.gov/member_info/text-labels-114.txt'
 partyDict = {'R': 'Republican', 'D': 'Democratic', 'I': 'Independent','': 'Unknown'}
 nextElection = '2014-11-04'
 nextInauguration = '2015-01-03'
@@ -60,7 +60,7 @@ def downloadHouse(url):
       name = name.strip().replace("   ", " ").replace("  ", " ").decode("Windows-1252").replace(u'\u2018',"'").replace(u'\u2019',"'").replace(u'\u201A',"'").replace(u'\u201B',"'").replace(u'\u2039',"'").replace(u'\u203A',"'").replace(u'\u201C','"').replace(u'\u201D','"').replace(u'\u201E','"').replace(u'\u201F','"').replace(u'\u00AB','"').replace(u'\u00BB','"').replace(u'\u00e0','a').replace(u'\u00e1','a').replace(u'\u00e8','e').replace(u'\u00e9','e').replace(u'\u00ec','i').replace(u'\u00ed','i').replace(u'\u00f2','o').replace(u'\u00f3','o').replace(u'\u00f9','u').replace(u'\u00fa','u')
  
       name = unicode(name)
-      district = member['113 St/Dis']
+      district = member['114 St/Dis']
       party = partyDict[member['Party']] 
       address = member['Address'] + ' ' + member['City'] + ', ' + member['State'] + ' ' + member['Zip+4']
       
